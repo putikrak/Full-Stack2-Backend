@@ -87,29 +87,29 @@ public class DataInitializer implements CommandLineRunner {
                 .derrotas(9)
                 .build());
 
-        // 2. Catálogo de Juegos
-        Juego valorant = juegoRepository.save(Juego.builder()
-                .nombre("Valorant")
-                .integrantesPorEquipo(5)
-                .modalidad("Equipos")
-                .build());
-
+// 2. Catálogo de Juegos (coincide con public/img/juegos/ del frontend)
         Juego lol = juegoRepository.save(Juego.builder()
                 .nombre("League of Legends")
                 .integrantesPorEquipo(5)
                 .modalidad("Equipos")
                 .build());
 
-        Juego cs2 = juegoRepository.save(Juego.builder()
-                .nombre("Counter-Strike 2")
-                .integrantesPorEquipo(5)
+        Juego rocket = juegoRepository.save(Juego.builder()
+                .nombre("Rocket League")
+                .integrantesPorEquipo(3)
                 .modalidad("Equipos")
                 .build());
 
-        Juego sf6 = juegoRepository.save(Juego.builder()
-                .nombre("Street Fighter 6")
+        Juego marioKart = juegoRepository.save(Juego.builder()
+                .nombre("Mario Kart 8 Deluxe")
                 .integrantesPorEquipo(1)
                 .modalidad("Individual")
+                .build());
+
+        Juego valorant = juegoRepository.save(Juego.builder()
+                .nombre("Valorant")
+                .integrantesPorEquipo(5)
+                .modalidad("Equipos")
                 .build());
 
         // 3. Equipos e Integrantes
@@ -153,7 +153,7 @@ public class DataInitializer implements CommandLineRunner {
 
         Torneo dueloSf6 = torneoRepository.save(Torneo.builder()
                 .nombre("Arena Fighting Championship SF6")
-                .juego(sf6)
+                .juego(marioKart)
                 .estado("abierto")
                 .modalidad("Individual")
                 .cupoMaximo(32)

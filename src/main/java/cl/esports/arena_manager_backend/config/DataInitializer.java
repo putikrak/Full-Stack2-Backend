@@ -87,7 +87,7 @@ public class DataInitializer implements CommandLineRunner {
                 .derrotas(9)
                 .build());
 
-// 2. Catálogo de Juegos (coincide con public/img/juegos/ del frontend)
+// 2. Catálogo de Juegos
         Juego lol = juegoRepository.save(Juego.builder()
                 .nombre("League of Legends")
                 .integrantesPorEquipo(5)
@@ -152,7 +152,7 @@ public class DataInitializer implements CommandLineRunner {
                 .build());
 
         Torneo dueloSf6 = torneoRepository.save(Torneo.builder()
-                .nombre("Arena Fighting Championship SF6")
+                .nombre("Copa Carros flipantes Al Volante")
                 .juego(marioKart)
                 .estado("abierto")
                 .modalidad("Individual")
@@ -160,7 +160,7 @@ public class DataInitializer implements CommandLineRunner {
                 .cupoOcupado(1)
                 .fechaInicio(LocalDate.now().plusDays(5))
                 .fechaCierreInscripcion(LocalDate.now().plusDays(3))
-                .descripcion("Llave individual 1v1 al mejor de 3 combates.")
+                .descripcion("Carrera supervivencia.")
                 .build());
 
         // 5. Inscripciones iniciales
